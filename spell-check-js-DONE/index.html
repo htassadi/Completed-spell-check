@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spell Check</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Spell Check Assignment</h1>
+  <hr>
+
+  <div>
+    <h3>Single Word Spell Check</h3>
+    
+    <label for="oneWordUserInput">Word:</label>
+    <input type="text" id="oneWordUserInput">
+    <br><br>
+    <label for="searchAlgorithmType">Choose an algorithm type:</label>
+    <select id="searchAlgorithmType" name="searchAlgorithmType">
+      <option value="linear">Linear</option>
+      <option value="binary">Binary</option>
+    </select><br><br>
+      <br>
+    <button id="oneWordCheckSubmitBtn">Submit</button>
+      <br><br>
+    <strong><span id='searchOutput'>Dictionary Results...</span></strong>
+  </div>
+
+  <hr>
+
+  <div>
+    <h3>Alice In Wonderland Spell Check</h3>
+      <br>
+    <label for="searchAlgorithmTypeAlice">Choose an algorithm type:</label>
+    <select id="searchAlgorithmTypeAlice" name="searchAlgorithmType">
+      <option value="linear">Linear</option>
+      <option value="binary">Binary</option>
+    </select>
+      <br><br>
+    <button id="aliceCheckSubmitBtn">Submit</button>
+      <br><br>
+    <strong><span id='aliceSearchOutput'>Alice In Wonderland Results...</span></strong>
+    <p>View console for more output...</p>
+  </div>
+
+  <!-- Load JavaScript -->
+  <script src="js/file-loader.js"></script>
+  <script src='js/main.js'></script>
+</body>
+
+</html>
