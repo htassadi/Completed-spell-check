@@ -18,8 +18,8 @@ document.getElementById("aliceCheckSubmitBtn").addEventListener("click", checkIn
 
 
 function checkInputs(){
-    searchTypeChosen = document.getElementById("searchAlgorithmType").value
-    searchItemInputed = document.getElementById("oneWordUserInput").value
+    Let searchTypeChosen = document.getElementById("searchAlgorithmType").value
+    Let searchItemInputed = document.getElementById("oneWordUserInput").value
     
     // Checking values are not ""
     console.log("searching for "+searchItemInputed + " through " + searchTypeChosen +" algorithm search");
@@ -33,7 +33,7 @@ function checkInputs(){
             }
 
     } else{
-        linearSearchGen(dictionary, searchItemInputed) 
+        linearSearchGen(dictionary, searchItemInputed); 
             if (returnedIndex == -1) {
                 document.getElementById("searchOutput").innerHTML = searchItemInputed + "is NOT in the dictionary."
             } else{
@@ -44,11 +44,11 @@ function checkInputs(){
 
 function checkInputAlice(){
     console.log("Checking Input..")
-    wordsNotFound = 0;
-    searchTypeChosen = document.getElementById("searchAlgorithmTypeAlice").value
+     wordsNotFound = 0;
+     searchTypeChosen = document.getElementById("searchAlgorithmTypeAlice").value
     
     if (searchTypeChosen == "binary"){
-        for (i=0; i < aliceWords.length ; i++) {
+        for (Let i=0; i < aliceWords.length ; i++) {
             binarySearchGen(dictionary, aliceWords[i]);
 
             if (returnedIndex == -1) {
@@ -61,7 +61,7 @@ function checkInputAlice(){
         document.getElementById("aliceSearchOutput").innerHTML = wordsNotFound + " word(s) NOT in the dictionary.";
     
     } else {
-        for (n=0; n < aliceWords.length ; n++) {
+        for (Let n=0; n < aliceWords.length ; n++) {
             linearSearchGen(dictionary, aliceWords[n]);
 
             if (returnedIndex == -1) {
@@ -77,7 +77,7 @@ function checkInputAlice(){
 
 
 function linearSearchGen (anArray, item){
-    for (i=0; i < anArray.length ; i++){
+    for (Let i=0; i < anArray.length ; i++){
         if (anArray[i] == item){
             returnedIndex = i
             return returnedIndex;
@@ -92,8 +92,8 @@ function linearSearchGen (anArray, item){
 
 //Binary Search
 function binarySearchGen(anArray, item){
-    lowerIndex = 0;
-    upperIndex = anArray.length + 1;
+    Let lowerIndex = 0;
+    Let upperIndex = anArray.length + 1;
 
     while (lowerIndex<=upperIndex) {
         midIndex = Math.floor((lowerIndex + upperIndex)/2);
